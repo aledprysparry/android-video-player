@@ -1,0 +1,16 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Build outputs
+**/build/
+app/release/
+
+# Keep the wrapper config but the jar is generated in CI / on first local build

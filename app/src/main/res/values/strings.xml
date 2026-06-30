@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Video Player</string>
+
+    <string name="empty_title">No videos found</string>
+    <string name="empty_body">Videos saved on this device will appear here.\nPull down to refresh.</string>
+
+    <string name="perm_title">Access your videos</string>
+    <string name="perm_body">This app needs permission to read videos stored on your device so it can list and play them.</string>
+    <string name="perm_button">Grant access</string>
+
+    <string name="cd_thumbnail">Video thumbnail</string>
+</resources>

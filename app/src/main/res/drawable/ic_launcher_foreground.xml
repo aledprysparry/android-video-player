@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Centered play triangle within the adaptive-icon safe zone -->
+    <path
+        android:fillColor="@color/brand_primary"
+        android:pathData="M44,38 L44,70 L72,54 Z" />
+</vector>
