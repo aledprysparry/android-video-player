@@ -18,6 +18,7 @@ class ChannelListActivity : AppCompatActivity() {
     private var allChannels: List<Channel> = emptyList()
     private var query: String = ""
     private var selectedGroup: String? = null   // null = All
+    private var firstSubmit = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,7 +85,12 @@ class ChannelListActivity : AppCompatActivity() {
             val matchesQuery = q.isEmpty() || ch.name.lowercase().contains(q)
             matchesGroup && matchesQuery
         }
-        adapter.submitList(filtered)
+        adapter.submitList(filtered) {
+            if (firstSubmit) {
+                firstSubmit = false
+                binding.recycler.scheduleLayoutAnimation()
+            }
+        }
         binding.emptyState.visibility = if (filtered.isEmpty()) View.VISIBLE else View.GONE
     }
 }

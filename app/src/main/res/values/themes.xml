@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.VideoPlayer" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.VideoPlayer" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Accent -->
         <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/brand_on_primary</item>
+        <item name="colorPrimaryContainer">@color/brand_container</item>
+        <item name="colorOnPrimaryContainer">@color/brand_primary</item>
         <item name="colorSecondary">@color/brand_primary</item>
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorOnSecondary">@color/brand_on_primary</item>
+        <item name="colorSecondaryContainer">@color/brand_container</item>
+        <item name="colorOnSecondaryContainer">@color/brand_primary</item>
+
+        <!-- Surfaces -->
+        <item name="android:colorBackground">@color/bg_base</item>
+        <item name="android:windowBackground">@color/bg_base</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorSurfaceVariant">@color/surface_container</item>
+        <item name="colorSurfaceContainerLowest">@color/bg_base</item>
+        <item name="colorSurfaceContainerLow">@color/surface</item>
+        <item name="colorSurfaceContainer">@color/surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/surface_container_high</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/outline</item>
+
+        <!-- System bars -->
+        <item name="android:statusBarColor">@color/bg_base</item>
+        <item name="android:navigationBarColor">@color/bg_base</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <!-- Shape system -->
+        <item name="shapeAppearanceCornerSmall">@style/Shape.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/Shape.Medium</item>
+        <item name="shapeAppearanceCornerLarge">@style/Shape.Large</item>
+    </style>
+
+    <!-- Rounded shape scale -->
+    <style name="Shape.Small" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerSize">10dp</item>
+    </style>
+    <style name="Shape.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">18dp</item>
+    </style>
+    <style name="Shape.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerSize">26dp</item>
+    </style>
+
+    <!-- Image corner overlays -->
+    <style name="Shape.Thumb" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+    <style name="Shape.Logo" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
     </style>
 
 </resources>

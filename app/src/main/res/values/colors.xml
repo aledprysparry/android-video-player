@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="brand_primary">#FF8800</color>
-    <color name="ic_launcher_background">#1B1B1F</color>
-    <color name="thumb_placeholder">#33000000</color>
-    <color name="preset_icon_bg">#1AFF8800</color>
+    <!-- Brand accent (warm orange — nods to VLC, refined) -->
+    <color name="brand_primary">#FF7E33</color>
+    <color name="brand_on_primary">#241200</color>
+    <color name="brand_container">#2E1C0C</color>
+
+    <!-- Layered dark surfaces -->
+    <color name="bg_base">#0C0C0F</color>
+    <color name="surface">#131318</color>
+    <color name="surface_container">#1B1B22</color>
+    <color name="surface_container_high">#23232B</color>
+    <color name="outline">#33333E</color>
+
+    <!-- Text -->
+    <color name="text_primary">#ECECEF</color>
+    <color name="text_secondary">#9A9AA6</color>
+
+    <!-- Misc -->
+    <color name="ic_launcher_background">#0C0C0F</color>
+    <color name="thumb_placeholder">#23232B</color>
+    <color name="preset_icon_bg">#2E1C0C</color>
+    <color name="scrim">#CC000000</color>
 </resources>

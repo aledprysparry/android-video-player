@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
                 VideoRepository.queryVideos(this@MainActivity)
             }
             binding.swipeRefresh.isRefreshing = false
-            adapter.submitList(videos)
+            adapter.submitList(videos) { binding.recycler.scheduleLayoutAnimation() }
             binding.emptyState.visibility =
                 if (videos.isEmpty()) android.view.View.VISIBLE else android.view.View.GONE
         }

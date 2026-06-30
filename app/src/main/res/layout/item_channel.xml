@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="10dp">
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="9dp">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="@drawable/bg_thumb_placeholder"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@color/surface_container_high"
         android:contentDescription="@string/cd_thumbnail"
-        android:padding="6dp"
-        android:scaleType="fitCenter" />
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:shapeAppearanceOverlay="@style/Shape.Logo" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
+        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -31,25 +33,35 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="@color/text_primary"
+            tools:text="Sky Sports Main Event" />
 
         <TextView
             android:id="@+id/group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:alpha="0.6"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+            android:textColor="@color/text_secondary"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            tools:text="Sports" />
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:alpha="0.8"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playPill"
+        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="false"
+        android:focusable="false"
         android:importantForAccessibility="no"
-        android:src="@drawable/ic_play_circle"
-        app:tint="@color/brand_primary" />
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_play_arrow"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="20dp" />
 
 </LinearLayout>
