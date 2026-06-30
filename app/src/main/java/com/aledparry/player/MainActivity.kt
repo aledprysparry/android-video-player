@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -44,6 +46,23 @@ class MainActivity : AppCompatActivity() {
 
         binding.grantButton.setOnClickListener { ensurePermission() }
         binding.swipeRefresh.setOnRefreshListener { ensurePermission() }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_network_stream -> {
+                startActivity(Intent(this, NetworkStreamActivity::class.java)); true
+            }
+            R.id.action_help -> {
+                startActivity(Intent(this, HelpActivity::class.java)); true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     override fun onStart() {

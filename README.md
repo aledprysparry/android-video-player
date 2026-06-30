@@ -17,6 +17,18 @@ It also registers as an "Open with" handler for `video/*` files from other apps.
 - Thumbnails via Glide; pull-to-refresh; empty + permission-needed states
 - Material 3 theming, day/night aware
 
+### Network streaming (IPTV)
+
+- **Network stream** screen: paste any stream/playlist URL, or tap a built-in public playlist
+  (iptv-org sports, Free-TV full lineup)
+- HLS (`.m3u8`) + progressive streams via Media3; cleartext (HTTP) allowed for IPTV sources
+- M3U **playlist parser** (`#EXTINF` with `tvg-logo` / `group-title`) → browsable **channel list**
+  with logos, **search**, and **category filter chips** (News, Movies, Kids, Music, …)
+- Smart routing: a single live stream plays directly; a multi-channel playlist opens the list
+- **How to watch** help screen walking through pick playlist → load → choose channel, with the
+  VPN / geo-restriction and community-maintained caveats
+- Honesty note: the app plays streams *you* provide. It does not host or supply any content.
+
 ## Tech
 
 | | |
